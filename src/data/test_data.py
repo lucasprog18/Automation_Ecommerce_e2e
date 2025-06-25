@@ -1,3 +1,4 @@
+# Dados de login válidos para testes automatizados (ambiente de demonstração)
 VALID_USER = {
     "email": "lucasprog1810@gmail.com",
     "password": "Prog#864920"
