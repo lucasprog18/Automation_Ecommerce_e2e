@@ -41,3 +41,12 @@ class LoginPage(BasePage):
     def login_failed(self):
         """Verifica se uma mensagem de erro de login foi exibida."""
         return self.is_element_present(self.ERROR_ALERT)
+    
+    def login_from_checkout(self, email, password):
+        """
+        Preenche o formulário de login embutido na página de checkout.
+        """
+        self.fill((By.ID, "input-login-email"), email)
+        self.fill((By.ID, "input-login-password"), password)
+        self.click((By.ID, "button-login"))
+

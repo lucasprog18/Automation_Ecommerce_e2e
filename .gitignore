@@ -8,7 +8,7 @@ __pycache__/
 *.pyc
 
 # Relatórios de teste
-reports/
+/reports/
 *.html
 
 # Logs e arquivos temporários

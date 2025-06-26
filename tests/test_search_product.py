@@ -14,6 +14,6 @@ def test_search_product(driver):
     results_page = SearchResultsPage(driver)
 
     home_page.open_home()
-    home_page.search_product("Macbook")
+    home_page.search_product("Ipod Nano")
 
     assert results_page.has_results()

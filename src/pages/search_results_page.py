@@ -7,14 +7,12 @@ class SearchResultsPage(BasePage):
     """Página de resultados de busca — lida com listagem e interação com os produtos retornados."""
     RESULT_TITLES = (By.CSS_SELECTOR, ".product-thumb h4 a")
 
+    
     def get_result_titles(self):
-        """
-        Retorna uma lista com os nomes de todos os produtos listados na busca.
-
-        Returns:
-            list[str]: Lista com os títulos/texto dos resultados encontrados.
-        """
+        self.wait.until(lambda d: len(self.find_all(self.RESULT_TITLES)) > 0)
         return [el.text for el in self.find_all(self.RESULT_TITLES)]
+
+
 
     def has_results(self):
         """
